@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smc-engine"
+version = "0.1.0"
+description = "Smart Money Concepts (ICT) detection for OHLC data: swings, BOS/CHoCH, order blocks, FVG, breakers, liquidity sweeps, OTE and confluence scoring."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Emil Rahmat" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pandas>=2.0"]
+keywords = ["smart-money-concepts", "smc", "ict", "order-block", "fair-value-gap", "trading", "technical-analysis"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Office/Business :: Financial :: Investment",
+  "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+
+[project.urls]
+Homepage = "https://github.com/Emil-02/smc-engine"
+Issues = "https://github.com/Emil-02/smc-engine/issues"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "matplotlib>=3.7"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/smc_engine"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
