@@ -3,6 +3,7 @@
 [![CI](https://github.com/Emil-02/smc-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/Emil-02/smc-engine/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+[![spruce](https://gh-spruce.vercel.app/api/badge?repo=Emil-02/smc-engine)](https://gh-spruce.vercel.app/u/Emil-02)
 
 **Smart Money Concepts (ICT) detection for OHLC data**, in plain pandas + NumPy.
 
